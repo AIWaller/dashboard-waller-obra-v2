@@ -5,6 +5,7 @@ const pool = require('./models/db');
 
 // Rutas
 const obrasRoutes = require('./routes/obras');
+const contratosRoutes = require('./routes/contratos');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Rutas
 app.use('/api/obras', obrasRoutes);
+app.use('/api/contratos', contratosRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {
