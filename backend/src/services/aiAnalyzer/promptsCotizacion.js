@@ -1,0 +1,36 @@
+const prompts = {
+
+  'Catalogo General': `Eres un analizador de cotizaciones para la empresa Waller.
+Analiza la pestaña Catalogo General y extrae los valores calculados finales.
+Devuelve UNICAMENTE un JSON valido sin texto adicional, sin markdown, sin explicaciones.
+{"precios_unitarios":{"divisorios":{"15cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"9cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"7.5cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"6cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"subtotal":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"importe":0}},"interiores":{"12cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"9cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"7.5cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"6cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"subtotal":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"importe":0}},"fachadas":{"12cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"9cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"7.5cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"6cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"subtotal":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"importe":0}},"detalles":{"12cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"9cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"7.5cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"6cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"subtotal":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"importe":0}},"losas":{"9cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"7.5cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"6cm":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"precio_m2":0,"importe":0},"subtotal":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"importe":0}},"total_panel":{"m2_sin_desperdicio":0,"m2_con_desperdicio":0,"importe":0}}}
+Datos:
+`,'Resumen Cotizacion': `Eres un analizador de cotizaciones para la empresa Waller.
+Analiza la pestaña Resumen Cotizacion y extrae los valores calculados finales.
+Devuelve UNICAMENTE un JSON valido sin texto adicional, sin markdown, sin explicaciones.
+{"proyecto":"","central_costos":"","costo_panel":0,"costo_complementarios":0,"costo_mano_obra":0,"costo_fletes_logistica":0,"subtotal_sin_iva":0,"costo_por_m2_materiales":0,"indirectos_porcentaje":0,"utilidad_porcentaje":0,"total_sin_iva":0,"iva":0,"total_con_iva":0,"precio_m2_sin_iva":0,"precio_m2_con_iva":0,"m2_cotizados":{"total_sin_desperdicio":0,"total_con_desperdicio":0,"divisorios":{"15cm":{"sin_desperdicio":0,"con_desperdicio":0},"9cm":{"sin_desperdicio":0,"con_desperdicio":0},"7.5cm":{"sin_desperdicio":0,"con_desperdicio":0},"6cm":{"sin_desperdicio":0,"con_desperdicio":0},"subtotal":{"sin_desperdicio":0,"con_desperdicio":0}},"interiores":{"12cm":{"sin_desperdicio":0,"con_desperdicio":0},"9cm":{"sin_desperdicio":0,"con_desperdicio":0},"7.5cm":{"sin_desperdicio":0,"con_desperdicio":0},"6cm":{"sin_desperdicio":0,"con_desperdicio":0},"subtotal":{"sin_desperdicio":0,"con_desperdicio":0}},"fachadas":{"12cm":{"sin_desperdicio":0,"con_desperdicio":0},"9cm":{"sin_desperdicio":0,"con_desperdicio":0},"7.5cm":{"sin_desperdicio":0,"con_desperdicio":0},"6cm":{"sin_desperdicio":0,"con_desperdicio":0},"subtotal":{"sin_desperdicio":0,"con_desperdicio":0}},"detalles":{"12cm":{"sin_desperdicio":0,"con_desperdicio":0},"9cm":{"sin_desperdicio":0,"con_desperdicio":0},"7.5cm":{"sin_desperdicio":0,"con_desperdicio":0},"6cm":{"sin_desperdicio":0,"con_desperdicio":0},"subtotal":{"sin_desperdicio":0,"con_desperdicio":0}},"losas":{"9cm":{"sin_desperdicio":0,"con_desperdicio":0},"7.5cm":{"sin_desperdicio":0,"con_desperdicio":0},"6cm":{"sin_desperdicio":0,"con_desperdicio":0},"subtotal":{"sin_desperdicio":0,"con_desperdicio":0}}}}
+Datos:
+`,'Indirecto Oficina': `Eres un analizador de cotizaciones para la empresa Waller.
+Analiza la pestaña Indirecto Oficina y extrae los valores calculados finales.
+Devuelve UNICAMENTE un JSON valido sin texto adicional, sin markdown, sin explicaciones.
+{"proyecto":"","central_costos":"","total_indirecto_oficina":0,"porcentaje_aplicado":0,"desglose":{"honorarios_sueldos_prestaciones":{"personal_directivo":0,"personal_tecnico":0,"personal_administrativo":0,"prestaciones_ley":0,"cuotas_imss_infonavit":0,"pasajes_viaticos":0,"prestaciones_adicionales":0,"subtotal":0},"depreciacion_mantenimiento_rentas":{"edificio_instalaciones":0,"mobiliario":0,"equipo_computo":0,"equipo_comunicaciones":0,"equipo_transporte":0,"otros_equipos":0,"subtotal":0},"gastos_oficina":{"papeleria":0,"energia_agua":0,"comunicacion":0,"servicios_externos":0,"licitaciones":0,"subtotal":0},"capacitacion":0,"seguros_fianzas":{"seguros":0,"fianzas":0,"subtotal":0}}}
+Datos:
+`,
+
+  'Indirecto Campo': `Eres un analizador de cotizaciones para la empresa Waller.
+Analiza la pestaña Indirecto Campo y extrae los valores calculados finales.
+Devuelve UNICAMENTE un JSON valido sin texto adicional, sin markdown, sin explicaciones.
+{"proyecto":"","central_costos":"","fecha_inicio":"","fecha_fin":"","duracion_dias":0,"duracion_meses":0,"total_indirecto_campo":0,"desglose":{"honorarios_sueldos_prestaciones":{"personal_tecnico_directivo":{"superintendente":0,"residente":0,"seguridad":0,"auxiliares":0,"subtotal":0},"personal_administrativo":{"administracion":0,"mensajero_chofer":0,"limpieza":0,"bodeguero":0,"subtotal":0},"prestaciones_ley":0,"cuotas_imss_infonavit":0,"pasajes_viaticos":0,"subtotal":0},"depreciacion_mantenimiento_rentas":{"caseta_oficinas":0,"bano_mobil":0,"retiro_escombro":0,"mobiliario":0,"equipo_comunicaciones":0,"subtotal":0},"gastos_oficina":{"papeleria":0,"energia_agua":0,"comunicacion":0,"copias":0,"servicios_externos":0,"subtotal":0},"seguros_fianzas":0,"trabajos_diversos":{"bodega_almacenamiento":0,"preparaciones_previas":0,"instalaciones_provisionales":0,"subtotal":0}}}
+Datos:
+`,
+
+  'Indirectos y Utilidad': `Eres un analizador de cotizaciones para la empresa Waller.
+Analiza la pestaña Indirectos y Utilidad y extrae los valores calculados finales.
+Devuelve UNICAMENTE un JSON valido sin texto adicional, sin markdown, sin explicaciones.
+{"proyecto":"","central_costos":"","costo_directo":0,"costo_indirecto_oficina":0,"costo_indirecto_campo":0,"costo_financiamiento":0,"subtotal_directo_indirectos":0,"utilidad":{"porcentaje_isr":0,"porcentaje_ptu":0,"porcentaje_total_isr_ptu":0,"porcentaje_utilidad_neta":0,"importe_utilidad_neta":0,"importe_isr_ptu":0,"importe_total_utilidad":0,"porcentaje_sobre_costo_directo":0},"resumen_sobrecosto":{"costo_directo":0,"indirecto_oficina":{"importe":0,"porcentaje":0},"indirecto_campo":{"importe":0,"porcentaje":0},"financiamiento":{"importe":0,"porcentaje":0},"utilidad_total":{"importe":0,"porcentaje":0},"total_propuesta":{"importe":0,"porcentaje":0}},"factores_resumen":{"indirectos_porcentaje":0,"utilidad_porcentaje":0}}
+Datos:
+`
+
+};
+
+module.exports = prompts;
