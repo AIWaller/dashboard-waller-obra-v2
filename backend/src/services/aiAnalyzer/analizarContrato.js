@@ -39,6 +39,7 @@ const analizarContrato = async (rutaPDF) => {
   "retenciones": "",
   "notas_importantes": ""
 }
+IMPORTANTE: El campo centro_costo SIEMPRE debe quedar vacío "". No intentes extraerlo del contrato. Lo llena el usuario manualmente.
 Si algún dato no está en el contrato, deja el campo vacío o en 0.`
           }
         ],
