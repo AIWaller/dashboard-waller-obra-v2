@@ -10,6 +10,7 @@ const cotizacionesRoutes = require('./routes/cotizaciones');
 const cotizacionCompletaRoutes = require('./routes/cotizacionCompleta');
 const archivosRoutes = require('./routes/archivos');
 const programaObraRoutes = require('./routes/programaObra');
+const catalogosRoutes = require('./routes/catalogos');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,6 +27,7 @@ app.use('/api/obras', cotizacionesRoutes);
 app.use('/api/obras', cotizacionCompletaRoutes);
 app.use('/api/obras', archivosRoutes);
 app.use('/api/obras', programaObraRoutes);
+app.use('/api/catalogos', catalogosRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {

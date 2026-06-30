@@ -3,6 +3,7 @@ import NuevaObra from './pages/NuevaObra';
 import SubirCotizacion from './pages/SubirCotizacion';
 import SubirCotizacionCompleta from './pages/SubirCotizacionCompleta';
 import ActualizarObra from './pages/ActualizarObra';
+import CatalogosGenerales from './pages/CatalogosGenerales';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/cotizacion" element={<SubirCotizacion />} />
         <Route path="/cotizacion-completa" element={<SubirCotizacionCompleta />} />
         <Route path="/actualizar-obra" element={<ActualizarObra />} />
+        <Route path="/catalogos-generales" element={<CatalogosGenerales />} />
       </Routes>
     </BrowserRouter>
   );
