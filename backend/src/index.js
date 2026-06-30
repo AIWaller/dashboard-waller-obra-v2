@@ -11,6 +11,7 @@ const archivosRoutes = require('./routes/archivos');
 const programaObraRoutes = require('./routes/programaObra');
 const catalogosRoutes = require('./routes/catalogos');
 const estimacionesRoutes = require('./routes/estimaciones');
+const cambiosRoutes = require('./routes/cambios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,6 +28,7 @@ app.use('/api/obras', archivosRoutes);
 app.use('/api/obras', programaObraRoutes);
 app.use('/api/catalogos', catalogosRoutes);
 app.use('/api/obras', estimacionesRoutes);
+app.use('/api/obras', cambiosRoutes);
 
 app.get('/', (req, res) => {
   res.json({ mensaje: 'Dashboard Waller API funcionando', version: '1.0.0', estado: 'OK' });

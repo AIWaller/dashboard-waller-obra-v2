@@ -148,8 +148,7 @@ export default function ActualizarObra() {
             >
               ← Cambiar obra
             </button>
-          </div>
-{cargando ? (
+          </div>{cargando ? (
             <p style={{ color: '#94a3b8' }}>Cargando archivos...</p>
           ) : (
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -178,15 +177,17 @@ export default function ActualizarObra() {
                           <button
                             onClick={() => setMostrarInputLink(true)}
                             disabled={subiendo === tipo}
-                            style={{
-                              padding: '0.3rem 0.75rem',
-                              backgroundColor: estado.label === 'Vinculado' ? '#334155' : '#2563eb',
-                              color: 'white', border: 'none', borderRadius: '4px',
-                              cursor: 'pointer', fontSize: '0.85rem'
-                            }}
+                            style={{ padding: '0.3rem 0.75rem', backgroundColor: estado.label === 'Vinculado' ? '#334155' : '#2563eb', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '0.85rem' }}
                           >
                             {estado.label === 'Vinculado' ? 'Actualizar link' : 'Pegar link'}
                           </button>
+                        ) : tipo === 'additivas' ? (
+                          <a
+                            href={obraSeleccionada ? ("/obra/" + obraSeleccionada.id + "/cambios") : "#"}
+                            style={{ display: 'inline-block', padding: '0.3rem 0.75rem', backgroundColor: '#2563eb', color: 'white', borderRadius: '4px', fontSize: '0.85rem', textDecoration: 'none' }}
+                          >
+                            Registrar
+                          </a>
                         ) : (
                           <>
                             <input
@@ -202,12 +203,7 @@ export default function ActualizarObra() {
                             <button
                               onClick={() => inputRefs.current[tipo]?.click()}
                               disabled={subiendo === tipo}
-                              style={{
-                                padding: '0.3rem 0.75rem',
-                                backgroundColor: estado.label === 'Subido' ? '#334155' : '#2563eb',
-                                color: 'white', border: 'none', borderRadius: '4px',
-                                cursor: 'pointer', fontSize: '0.85rem'
-                              }}
+                              style={{ padding: '0.3rem 0.75rem', backgroundColor: estado.label === 'Subido' ? '#334155' : '#2563eb', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '0.85rem' }}
                             >
                               {subiendo === tipo ? 'Subiendo...' : estado.label === 'Subido' ? 'Actualizar' : 'Subir'}
                             </button>
