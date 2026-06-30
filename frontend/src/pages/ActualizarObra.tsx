@@ -74,6 +74,8 @@ export default function ActualizarObra() {
       formData.append(campo, file);
       if (tipo === 'cotizacion_completa') {
         await api.post(`/obras/${obraSeleccionada.id}/cotizacion-completa`, formData);
+      } else if (tipo === 'estimaciones') {
+        await api.post(`/obras/${obraSeleccionada.id}/estimaciones`, formData);
       } else {
         await api.post(`/obras/${obraSeleccionada.id}/archivo`, formData);
       }
